@@ -35,18 +35,12 @@ const onSubmit = (e: React.SyntheticEvent) => {
 const ControlPanel = (props: ControlPanelPropsType) => {
   const {dispatch} = props;
 
-  useEffect(() => {
-    return () => {
-      console.log("ControlPanel will unmount");
-    };
-  });
-
   return (
     <form css={formStyle} onSubmit={onSubmit}>
       <div css={controlButtonsStyle}>
         <Button>Start</Button>
         <Button>Stop</Button>
-        <Button>Clear</Button>
+        <Button>Reset</Button>
       </div>
       <div css={radioToolbarStyle}>
         <input css={inputStyle} type="radio" name="speed" value="slow" id="radio-slow"/>

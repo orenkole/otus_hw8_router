@@ -2,7 +2,7 @@ import {
   ActionsType,
   AppStateType,
 } from "@/common/types";
-import { updateFieldInfo } from "@/common/helperFunctions";
+import { updateSize, updateFilling } from "@/common/helperFunctions";
 
 const reducer = (
   prevState: AppStateType,
@@ -12,7 +12,13 @@ const reducer = (
   case "UPDATE_FILLING_PERCENTAGE":
     return {
       ...prevState,
-      fillingPercentage: action.payload
+      fillingPercentage: action.payload,
+      fieldInfo: updateFilling({
+        prevFieldInfo: prevState.fieldInfo,
+        width: prevState.width,
+        height: prevState.height,
+        fillingPercentage: action.payload,
+      })
     };
   case "CELL_CLICK": 
     return {
@@ -36,8 +42,9 @@ const reducer = (
     return {
       ...prevState,
       height: action.payload,
-      fieldInfo: updateFieldInfo({
+      fieldInfo: updateSize({
         prevFieldInfo: prevState.fieldInfo,
+        fillingPercentage: prevState.fillingPercentage,
         width: prevState.width,
         height: action.payload,
       })
@@ -46,12 +53,13 @@ const reducer = (
     return {
       ...prevState,
       width: action.payload,
-      fieldInfo: updateFieldInfo({
+      fieldInfo: updateSize({
         prevFieldInfo: prevState.fieldInfo,
+        fillingPercentage: prevState.fillingPercentage,
         height: prevState.height,
         width: action.payload,
       })
-    };   
+    };
   default: return prevState;
   }
 };

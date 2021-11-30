@@ -1,4 +1,4 @@
-import React, {Dispatch, useEffect} from "react";
+import React, {Dispatch} from "react";
 import { Cell } from "@/components/Cell";
 import { Row } from "@/components/Row";
 import { ActionsType, FieldStateType } from "@/common/types";
@@ -9,9 +9,6 @@ export type FieldPropsType = {
 }
 
 const Field = (props: FieldPropsType) => {
-  useEffect(() => {
-    console.log("Field did mount");
-  });
   
   const {
     fieldInfo,
