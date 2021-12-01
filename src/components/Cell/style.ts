@@ -13,7 +13,9 @@ const ripple = keyframes`
     }
 `;
 
-const cellBoxStyle: InterpolationWithTheme<any> = {
+const getCellBoxStyle = (args: {
+  cellMode: number
+}): InterpolationWithTheme<unknown> => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -24,6 +26,7 @@ const cellBoxStyle: InterpolationWithTheme<any> = {
   // position ripple span
   position: "relative",
   overflow: "hidden",
+  backgroundColor: args.cellMode === 1 ? "lightgrey" : "white",
   "& .active": {
     position: "absolute",
     borderRadius: "50%",
@@ -35,8 +38,8 @@ const cellBoxStyle: InterpolationWithTheme<any> = {
     animation: `${ripple} 2s`,
     opacity: 0,
   },
-};
+});
 
 export {
-  cellBoxStyle,
+  getCellBoxStyle,
 };

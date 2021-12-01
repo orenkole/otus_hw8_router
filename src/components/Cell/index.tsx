@@ -1,6 +1,6 @@
 import React, {Dispatch, useRef} from "react";
 import { ActionsType } from "@/common/types";
-import { cellBoxStyle } from "./style";
+import { getCellBoxStyle } from "./style";
 import { handleRipple } from "./helpers";
 
 export type CellInfoType = {
@@ -28,7 +28,7 @@ const Cell = (props: CellPropsType) => {
 
   return (
     <div
-      css={cellBoxStyle}
+      css={getCellBoxStyle({cellMode: props.cellInfo.cellMode})}
       onClick={onClick}
     >
       <span>
