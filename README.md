@@ -1,5 +1,7 @@
 # Homework 7: React patterns
 
+**Сайт:** http://otus-hw.s3-website.us-east-2.amazonaws.com/
+
 **Цель:**
 
 Оптимизируем код с помощью react patterns
