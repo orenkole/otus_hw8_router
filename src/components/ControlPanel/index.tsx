@@ -1,5 +1,5 @@
 import React, {Dispatch, useEffect} from "react";
-import { changeHandler, ActionsType } from "@/common/types";
+import { changeHandler, ActionsType, resetHandler } from "@/common/types";
 import {
   radioToolbarStyle,
   formStyle,
@@ -25,7 +25,13 @@ const onWidthChange: changeHandler = ({ ev, dispatch }) => {
 };
 
 const onHeightChange: changeHandler = ({ ev, dispatch }) => {
+  console.log(" on heigtht change");
   dispatch({ type: "UPDATE_HEIGHT", payload: +ev.target.value });
+};
+
+const onReset: resetHandler = ({ dispatch }) => {
+  console.log("on reset");
+  dispatch({ type: "RESET" });
 };
 
 const onSubmit = (e: React.SyntheticEvent) => {
@@ -40,7 +46,7 @@ const ControlPanel = (props: ControlPanelPropsType) => {
       <div css={controlButtonsStyle}>
         <Button>Start</Button>
         <Button>Stop</Button>
-        <Button>Reset</Button>
+        <Button onClick={() => {onReset({dispatch});}}>Reset</Button>
       </div>
       <div css={radioToolbarStyle}>
         <input css={inputStyle} type="radio" name="speed" value="slow" id="radio-slow"/>

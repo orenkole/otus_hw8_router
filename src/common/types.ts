@@ -20,9 +20,14 @@ export type ActionsType =
     | { type: "UPDATE_FILLING_PERCENTAGE"; payload: number; } 
     | { type: "UPDATE_WIDTH"; payload: number; }
     | { type: "UPDATE_HEIGHT"; payload: number; }
-    | { type: "CELL_CLICK"; payload: string; };
+    | { type: "CELL_CLICK"; payload: string; }
+    | { type: "RESET" }
 
 export type changeHandler = (args: {
     ev: React.ChangeEvent<HTMLInputElement>,
+    dispatch: Dispatch<ActionsType>
+}) => void;
+
+export type resetHandler = (args: {
     dispatch: Dispatch<ActionsType>
 }) => void;

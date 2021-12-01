@@ -37,6 +37,7 @@ const Button = (props: ButtonPropsType) => {
     <button
       css={ButtonStyle}
       ref={buttonRef}
+      {...props}
     >
       {props.children}
       <div

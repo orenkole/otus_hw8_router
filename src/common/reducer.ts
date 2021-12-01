@@ -3,6 +3,7 @@ import {
   AppStateType,
 } from "@/common/types";
 import { updateSize, updateFilling } from "@/common/helperFunctions";
+import { initialState } from "@/App";
 
 const reducer = (
   prevState: AppStateType,
@@ -49,7 +50,8 @@ const reducer = (
         height: action.payload,
       })
     };
-  case "UPDATE_WIDTH": 
+  case "UPDATE_WIDTH":
+    console.log("update width"); 
     return {
       ...prevState,
       width: action.payload,
@@ -60,6 +62,9 @@ const reducer = (
         width: action.payload,
       })
     };
+  case "RESET":
+    console.log("reset");
+    return initialState;
   default: return prevState;
   }
 };
