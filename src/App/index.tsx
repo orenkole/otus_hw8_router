@@ -11,15 +11,20 @@ import { Box } from "@/elements/Box";
 import { appStyles } from "./style";
 import { SignInForm } from "@/components/SignInForm";
 
+const initialFieldParams = {width: 5, height: 5, fillingPercentage: 0};
+
+export const initialState: AppStateType = {
+  fieldInfo: setInitialFieldInfo({
+    width: initialFieldParams.width,
+    height: initialFieldParams.height,
+    fillingPercentage: initialFieldParams.fillingPercentage
+  }),
+  fillingPercentage: initialFieldParams.fillingPercentage,
+  width: initialFieldParams.width,
+  height: initialFieldParams.height
+};
 
 const App = () => {
-  const initialSizes = {width: 2, height: 2};
-  const initialState: AppStateType = {
-    fieldInfo: setInitialFieldInfo({width: initialSizes.width, height: initialSizes.height}),
-    fillingPercentage: 50,
-    width: initialSizes.width,
-    height: initialSizes.height
-  };
 
   const [state, dispatch] = useReducer(reducer, initialState);
 

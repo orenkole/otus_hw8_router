@@ -11,7 +11,7 @@ const onSubmit = (e: React.SyntheticEvent) => {
 };
 
 
-const SignInForm = (props: any) => {
+const SignInForm = () => {
   return (
     <form css={formStyle} onSubmit={onSubmit}>
       <label>

@@ -13,7 +13,7 @@ describe("ControlPanel rendering", () => {
 		);
 		expect(screen.getByText("Start")).toBeInTheDocument();
 		expect(screen.getByText("Stop")).toBeInTheDocument();
-		expect(screen.getByText("Clear")).toBeInTheDocument();
+		expect(screen.getByText("Reset")).toBeInTheDocument();
 		expect(screen.getByText("Slow")).toBeInTheDocument();
 		expect(screen.getByText("Moderate")).toBeInTheDocument();
 		expect(screen.getByText("Fast")).toBeInTheDocument();
