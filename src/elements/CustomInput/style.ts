@@ -1,6 +1,7 @@
 import { InterpolationWithTheme } from "@emotion/core";
+import { Theme } from "@emotion/react";
 
-const inputStyle: InterpolationWithTheme<any> = {
+const inputStyle: InterpolationWithTheme<Theme> = {
   padding: "4px",
   border: "1px solid lightgrey",
   borderRadius: "4px",
