@@ -5,6 +5,7 @@ export type AppStateType = {
     fillingPercentage: number,
     width: number,
     height: number,
+    login: string
 }
 
 export type CellInfoType = {
@@ -22,6 +23,8 @@ export type ActionsType =
     | { type: "UPDATE_HEIGHT"; payload: number; }
     | { type: "CELL_CLICK"; payload: string; }
     | { type: "RESET" }
+    | { type: "LOGIN", payload: string;  }
+    | { type: "LOGOUT" }
 
 export type changeHandler = (args: {
     ev: React.ChangeEvent<HTMLInputElement>,
@@ -29,5 +32,10 @@ export type changeHandler = (args: {
 }) => void;
 
 export type resetHandler = (args: {
+    dispatch: Dispatch<ActionsType>
+}) => void;
+
+export type formSubmitHandler = (args: {
+    ev: React.SyntheticEvent,
     dispatch: Dispatch<ActionsType>
 }) => void;

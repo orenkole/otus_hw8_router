@@ -38,15 +38,6 @@ const formStyle: InterpolationWithTheme<any> = {
   padding: "16px",
 };
 
-const inputStyle: InterpolationWithTheme<any> = {
-  padding: "4px",
-  border: "1px solid lightgrey",
-  borderRadius: "4px",
-  width: "48px",
-  textAlign: "right",
-  marginLeft: "4px",
-};
-
 const controlButtonsStyle: InterpolationWithTheme<any> = {
   display: "flex",
   gap: "4px",
@@ -62,5 +53,4 @@ export {
   formStyle,
   controlButtonsStyle,
   fieldSizesStyle,
-  inputStyle
 };

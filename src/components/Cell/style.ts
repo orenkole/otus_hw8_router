@@ -16,13 +16,14 @@ const ripple = keyframes`
 const getCellBoxStyle = (args: {
   cellMode: number
 }): InterpolationWithTheme<unknown> => ({
+  fontSize: "10px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   padding: "4px",
   border: "1px solid black",
-  width: "20px",
-  height: "20px",
+  width: "10px",
+  height: "10px",
   // position ripple span
   position: "relative",
   overflow: "hidden",

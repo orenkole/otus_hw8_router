@@ -16,6 +16,7 @@ const ripple = keyframes`
 `;
 
 const ButtonStyle: InterpolationWithTheme<any> = {
+  fontSize: "14px",
   backgroundColor: "#fff",
   display: "inline-block",
   color: "black",
