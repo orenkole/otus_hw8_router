@@ -1,5 +1,5 @@
 **React router**
-**сайт:** http://hw8-router.s3-website.eu-central-1.amazonaws.com/login
+**сайт:** http://hw8-router.s3-website.eu-central-1.amazonaws.com
 **Цель:**
 
 - Реализовать переход между страницами в приложении
