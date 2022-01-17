@@ -9,7 +9,7 @@ import { Box } from "@/elements/Box";
 import { appStyles } from "./style";
 import {SignInForm} from "@/components/SignInForm";
 
-const initialFieldParams = { width: 5, height: 5, fillingPercentage: 0 };
+const initialFieldParams = {width: 5, height: 5, fillingPercentage: 0};
 
 export const initialState: AppStateType = {
   fieldInfo: setInitialFieldInfo({
