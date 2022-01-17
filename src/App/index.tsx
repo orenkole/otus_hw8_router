@@ -10,7 +10,7 @@ import { appStyles } from "./style";
 import { SignInForm } from "@/components/SignInForm";
 
 const initialFieldParams = { width: 5, height: 5, fillingPercentage: 0 };
-
+// test chromatic
 export const initialState: AppStateType = {
   fieldInfo: setInitialFieldInfo({
     width: initialFieldParams.width,
