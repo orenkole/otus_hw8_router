@@ -4,7 +4,7 @@ import { ControlPanel } from "@/components/ControlPanel";
 import {AppStateType} from "@/common/types";
 import { reducer } from "@/common/reducer";
 import { setInitialFieldInfo } from "@/common/helperFunctions";
-import { Container } from "@/elements/Container";
+import {Container} from "@/elements/Container";
 import { Box } from "@/elements/Box";
 import { appStyles } from "./style";
 import {SignInForm} from "@/components/SignInForm";
