@@ -7,6 +7,7 @@ const config = {
   output: {
     path: BUILD_DIRECTORY,
     filename: "bundle.js",
+    publicPath: "/",
   },
   resolve: {
     extensions: ["", ".webpack.js", ".ts", ".tsx", ".js"],
@@ -23,6 +24,10 @@ const config = {
         },
       },
     ],
+  },
+  devServer: {
+    // https://ui.dev/react-router-cannot-get-url-refresh/
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

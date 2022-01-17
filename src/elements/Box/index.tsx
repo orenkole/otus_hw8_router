@@ -1,10 +1,11 @@
 import React from "react";
 
-type BoxPropsType = { children: React.ReactNode; } & any
+type BoxPropsType = { children: React.ReactNode; } & React.CSSProperties;
 
-const Box = ({children, ...styleParams}: BoxPropsType) => {
+const Box = (props: BoxPropsType) => {
+  const {children, ...cssProps} = props;
   return (
-    <div css={styleParams}>
+    <div css={{...cssProps}}>
       {children}
     </div>
   );

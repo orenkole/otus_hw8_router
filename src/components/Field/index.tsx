@@ -14,7 +14,6 @@ const Field = (props: FieldPropsType) => {
     fieldInfo,
     dispatch
   } = props;
-  console.log("FIELD STATE ", fieldInfo);
   return (
     <div>
       {

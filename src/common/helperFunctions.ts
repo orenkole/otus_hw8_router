@@ -95,7 +95,6 @@ export const updateSize = (args: {
   const totalItemsToPlace = Math.ceil(newFieldInfo.flat().length * fillingProbability);
   const itemsLeftToPlace = totalItemsToPlace - itemsAlreadyPlaced;
   let fieldFilled: FieldStateType = newFieldInfo;
-  console.log(" items left to place", itemsLeftToPlace);
   if (itemsLeftToPlace > 0) {
     if (indexesToAdjust.length < itemsLeftToPlace) {
       const wholeFieldIndexes = newFieldInfo

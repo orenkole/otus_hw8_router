@@ -10,6 +10,16 @@ const reducer = (
   action: ActionsType
 ): AppStateType => {
   switch(action.type) {
+  case "LOGIN":
+    return {
+      ...prevState,
+      login: action.payload
+    };
+  case "LOGOUT":
+    return {
+      ...prevState,
+      login: ""
+    };
   case "UPDATE_FILLING_PERCENTAGE":
     return {
       ...prevState,
@@ -51,7 +61,6 @@ const reducer = (
       })
     };
   case "UPDATE_WIDTH":
-    console.log("update width"); 
     return {
       ...prevState,
       width: action.payload,
@@ -63,7 +72,6 @@ const reducer = (
       })
     };
   case "RESET":
-    console.log("reset");
     return initialState;
   default: return prevState;
   }
