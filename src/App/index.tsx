@@ -9,7 +9,7 @@ import { GameForAuthorized } from '@/components/Game';
 import { SignInForm } from '@/components/SignInForm';
 
 const initialFieldParams = { width: 5, height: 5, fillingPercentage: 0 };
-
+// test format
 /* istanbul ignore next */
 export const initialState: AppStateType = {
   fieldInfo: setInitialFieldInfo({
