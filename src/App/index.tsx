@@ -6,7 +6,7 @@ import { reducer } from "@/common/reducer";
 import { setInitialFieldInfo } from "@/common/helperFunctions";
 import {Container} from "@/elements/Container";
 import { Box } from "@/elements/Box";
-import { appStyles } from "./style";
+import {appStyles} from "./style";
 import {SignInForm} from "@/components/SignInForm";
 
 const initialFieldParams = {width: 5, height: 5, fillingPercentage: 0};
