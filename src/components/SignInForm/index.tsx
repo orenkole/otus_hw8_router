@@ -1,11 +1,11 @@
-import React, { Dispatch } from "react";
-import { useNavigate } from "react-router-dom";
-import { formStyle, controlButtonsStyle } from "./style";
-import { Button } from "@/elements/Button";
-import { Container } from "@/elements/Container";
-import { Box } from "@/elements/Box";
-import { CustomInput } from "@/elements/CustomInput/CustomInput.index";
-import { ActionsType, AppStateType, formSubmitHandler } from "@/common/types";
+import React, { Dispatch } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { formStyle, controlButtonsStyle } from './style';
+import { Button } from '@/elements/Button';
+import { Container } from '@/elements/Container';
+import { Box } from '@/elements/Box';
+import { CustomInput } from '@/elements/CustomInput/CustomInput.index';
+import { ActionsType, AppStateType, formSubmitHandler } from '@/common/types';
 
 export type SignInFormPropsType = {
   dispatch: Dispatch<ActionsType>;
@@ -20,11 +20,11 @@ const SignInForm = (props: SignInFormPropsType) => {
     ev.preventDefault();
     const formElement = ev.target as HTMLFormElement;
     const formData = new FormData(formElement);
-    const login = formData.get("login");
-    if (typeof login === "string" && login.length > 0) {
-      dispatch({ type: "LOGIN", payload: login });
-      localStorage.setItem("login", login);
-      navigate("/", { replace: true });
+    const login = formData.get('login');
+    if (typeof login === 'string' && login.length > 0) {
+      dispatch({ type: 'LOGIN', payload: login });
+      localStorage.setItem('login', login);
+      navigate('/', { replace: true });
     }
   };
 

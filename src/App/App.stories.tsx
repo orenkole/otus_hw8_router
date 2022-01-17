@@ -1,11 +1,11 @@
-import React from "react";
-import { Story as StoryType } from "@storybook/react";
-import { App } from ".";
+import React from 'react';
+import { Story as StoryType } from '@storybook/react';
+import { App } from '.';
 
 const Story = {
-  title: "App",
+  title: 'App',
   component: App,
-  argTypes: {}
+  argTypes: {},
 };
 
 const Template: StoryType = (args) => <App {...args} />;

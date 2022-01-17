@@ -1,6 +1,6 @@
 const appStyles = {
-  fontFamily: "sans-serif",
-  fontSize: "14px"
+  fontFamily: 'sans-serif',
+  fontSize: '14px',
 };
 
-export {appStyles};
+export { appStyles };

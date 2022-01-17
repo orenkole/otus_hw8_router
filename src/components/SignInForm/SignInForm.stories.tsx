@@ -1,10 +1,10 @@
-import React from "react";
-import { Story as StoryType } from "@storybook/react";
-import { SignInForm, SignInFormPropsType } from ".";
-import StoryRouter from "storybook-react-router";
+import React from 'react';
+import { Story as StoryType } from '@storybook/react';
+import { SignInForm, SignInFormPropsType } from '.';
+import StoryRouter from 'storybook-react-router';
 
 const Story = {
-  title: "Sign in form",
+  title: 'Sign in form',
   component: SignInForm,
 };
 

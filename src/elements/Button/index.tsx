@@ -1,6 +1,6 @@
 // https://css-tricks.com/how-to-recreate-the-ripple-effect-of-material-design-buttons/
-import React, { useRef } from "react";
-import { ButtonStyle } from "./style";
+import React, { useRef } from 'react';
+import { ButtonStyle } from './style';
 
 type ButtonPropsType = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
@@ -21,9 +21,9 @@ const handleRipple = (args: {
   rippleCircleElement.style.left = `${x}px`;
   rippleCircleElement.style.top = `${y}px`;
 
-  rippleElement.classList.add("active");
+  rippleElement.classList.add('active');
   setTimeout(() => {
-    rippleElement.classList.remove("active");
+    rippleElement.classList.remove('active');
   }, 300);
 };
 

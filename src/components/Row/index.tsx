@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react';
 
 const Row = (props: { children: React.ReactNode }) => {
   return (
     <div
       css={{
-        display: "flex",
+        display: 'flex',
       }}
-    >{props.children}</div>
+    >
+      {props.children}
+    </div>
   );
 };
 
-export {Row};
+export { Row };
