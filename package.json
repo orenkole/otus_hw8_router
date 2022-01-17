@@ -77,10 +77,10 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint ./src --fix"
+      "eslint ./src --fix",
+      "eslint --cache --fix"
     ],
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,ts,tsx,css,md}": "prettier --write"
   },
   "jest": {
     "moduleNameMapper": {
