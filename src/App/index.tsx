@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import { Field } from "@/components/Field";
 import { ControlPanel } from "@/components/ControlPanel";
-import { AppStateType } from "@/common/types";
+import {AppStateType} from "@/common/types";
 import { reducer } from "@/common/reducer";
 import { setInitialFieldInfo } from "@/common/helperFunctions";
 import { Container } from "@/elements/Container";
